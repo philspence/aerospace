@@ -276,6 +276,10 @@ run = 'layout floating'
 if.app-id = "com.apple.reminders"
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-id = "net.whatsapp.WhatsApp"
+run = 'layout floating'
+
 [workspace-to-monitor-force-assignment]
     T = 'built-in' #teams
     O = 'built-in' #outlook
