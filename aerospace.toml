@@ -52,12 +52,12 @@ automatically-unhide-macos-hidden-apps = false
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-    inner.horizontal = 0
-    inner.vertical =   0
-    outer.left =       0
-    outer.bottom =     0
-    outer.top =        0
-    outer.right =      0
+    inner.horizontal = 5
+    inner.vertical =   5
+    outer.left =       5
+    outer.bottom =     5
+    outer.top =        5
+    outer.right =      5
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -125,14 +125,14 @@ automatically-unhide-macos-hidden-apps = false
     # alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
     alt-b = 'workspace B'
     alt-c = 'workspace C'
-    # alt-d = 'workspace D'
-    # alt-e = 'workspace E'
+    alt-d = 'workspace D'
+    alt-e = 'workspace E'
     alt-f = 'workspace F'
-    # alt-g = 'workspace G'
+    alt-g = 'workspace G'
     # alt-i = 'workspace I'
     alt-m = 'workspace M'
     # alt-n = 'workspace N'
-    # alt-o = 'workspace O'
+    alt-o = 'workspace O'
     alt-p = 'workspace P'
     # alt-q = 'workspace Q'
     # alt-r = 'workspace R'
@@ -140,15 +140,15 @@ automatically-unhide-macos-hidden-apps = false
     alt-t = 'workspace T'
     # alt-u = 'workspace U'
     # alt-v = 'workspace V'
-    # alt-w = 'workspace W'
+    alt-w = 'workspace W'
     # alt-x = 'workspace X'
     # alt-y = 'workspace Y'
     # alt-z = 'workspace Z'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    alt-shift-1 = 'move-node-to-workspace 1'
+    alt-shift-1 = 'move-node-to-workspace 1' # jellyfin 
     alt-shift-2 = 'move-node-to-workspace 2'
-    alt-shift-3 = 'move-node-to-workspace 3'
+    # alt-shift-3 = 'move-node-to-workspace 3'
     alt-shift-4 = 'move-node-to-workspace 4'
     alt-shift-5 = 'move-node-to-workspace 5'
     alt-shift-6 = 'move-node-to-workspace 6'
@@ -156,29 +156,29 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-8 = 'move-node-to-workspace 8'
     alt-shift-9 = 'move-node-to-workspace 9'
     # alt-shift-a = 'move-node-to-workspace A'
-    alt-shift-b = 'move-node-to-workspace B'
-    alt-shift-c = 'move-node-to-workspace C'
-    # alt-shift-d = 'move-node-to-workspace D'
-    # alt-shift-e = 'move-node-to-workspace E'
-    alt-shift-f = 'move-node-to-workspace F'
-    # alt-shift-g = 'move-node-to-workspace G'
+    alt-shift-b = 'move-node-to-workspace B' # browser
+    alt-shift-c = 'move-node-to-workspace C' # code
+    alt-shift-d = 'move-node-to-workspace D' # documentation
+    alt-shift-e = 'move-node-to-workspace E' # excel
+    alt-shift-f = 'move-node-to-workspace F' # files
+    alt-shift-g = 'move-node-to-workspace G' # gaming
     # alt-shift-i = 'move-node-to-workspace I'
-    alt-shift-m = 'move-node-to-workspace M'
+    alt-shift-m = 'move-node-to-workspace M' # music
     # alt-shift-n = 'move-node-to-workspace N'
-    # alt-shift-o = 'move-node-to-workspace O'
-    alt-shift-p = 'move-node-to-workspace P'
+    alt-shift-o = 'move-node-to-workspace O' # outlook
+    alt-shift-p = 'move-node-to-workspace P'# powerpoint
     # alt-shift-q = 'move-node-to-workspace Q'
     # alt-shift-r = 'move-node-to-workspace R'
-    alt-shift-s = 'move-node-to-workspace S'
-    alt-shift-t = 'move-node-to-workspace T'
+    alt-shift-s = 'move-node-to-workspace S' # shell
+    alt-shift-t = 'move-node-to-workspace T' # teams
     # alt-shift-u = 'move-node-to-workspace U'
     # alt-shift-v = 'move-node-to-workspace V'
-    # alt-shift-w = 'move-node-to-workspace W'
+    alt-shift-w = 'move-node-to-workspace W' # word
     # alt-shift-x = 'move-node-to-workspace X'
     # alt-shift-y = 'move-node-to-workspace Y'
     # alt-shift-z = 'move-node-to-workspace Z'
 
-    alt-shift-w = 'fullscreen'
+    alt-shift-0 = 'fullscreen'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
@@ -210,11 +210,11 @@ automatically-unhide-macos-hidden-apps = false
 
 [[on-window-detected]]
 if.app-id = "com.googlecode.iterm2"
-run = 'move-node-to-workspace T'
+run = 'move-node-to-workspace S'
 
 [[on-window-detected]]
 if.app-id = "com.apple.Terminal"
-run = 'move-node-to-workspace T'
+run = 'move-node-to-workspace S'
 
 [[on-window-detected]]
 if.app-id = "org.mozilla.firefox"
@@ -226,7 +226,7 @@ run = 'move-node-to-workspace C'
 
 [[on-window-detected]]
 if.app-id = "com.valvesoftware.steam"
-run = 'move-node-to-workspace S'
+run = 'move-node-to-workspace G'
 
 [[on-window-detected]]
 if.app-id = "com.apple.finder"
@@ -234,8 +234,58 @@ run = 'move-node-to-workspace F'
 
 [[on-window-detected]]
 if.app-id = "tv.jellyfin.player"
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = "com.microsoft.Word"
+run = 'move-node-to-workspace W'
+
+[[on-window-detected]]
+if.app-id = "com.microsoft.Powerpoint"
 run = 'move-node-to-workspace P'
+
+[[on-window-detected]]
+if.app-id = "com.microsoft.Outlook"
+run = 'move-node-to-workspace O'
+
+[[on-window-detected]]
+if.app-id = "com.microsoft.teams2"
+run = 'move-node-to-workspace T'
+
+[[on-window-detected]]
+if.app-id = "com.microsoft.Excel"
+run = 'move-node-to-workspace E'
 
 [[on-window-detected]]
 if.app-id = "com.apple.Music"
 run = 'move-node-to-workspace M'
+
+[[on-window-detected]]
+if.app-id = "com.apple.ActivityMonitor"
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = "com.unicornsonlsd.finamp-ios"
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = "com.apple.Notes"
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = "com.apple.reminders"
+run = 'layout floating'
+
+[workspace-to-monitor-force-assignment]
+    T = 'built-in' #teams
+    O = 'built-in' #outlook
+    M = 'built-in' #music
+    F = 'built-in' #finder
+    P = 'main' #powerpoint
+    W = 'main' #microsoft-word
+    E = 'main' #microsoft-excel
+    S = 'main' #terminal or shell
+    B = 'main' #browser
+    C = 'main' #code
+    D = 'S220HQL'
+    
