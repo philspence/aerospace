@@ -217,6 +217,10 @@ if.app-id = "com.apple.Terminal"
 run = 'move-node-to-workspace S'
 
 [[on-window-detected]]
+if.app-id = "org.alacritty"
+run = 'move-node-to-workspace S'
+
+[[on-window-detected]]
 if.app-id = "org.mozilla.firefox"
 run = 'move-node-to-workspace B'
 
